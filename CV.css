@@ -1,4 +1,4 @@
-body{
+body {
   background-color: rgb(86, 138, 180);
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   font-family: 'Titillium Web', Roboto Slab, serif;
@@ -12,23 +12,15 @@ body{
   margin-left: 200px;
   padding-left: 50px;
   padding-right: 50px;
-  /* test */
-  /* border-style: solid; */
-  /* border-color: white; */
 }
 
-.flexTop > div {
+.flexTop>div {
   margin: 20px;
   padding: 10px;
   min-width: 300px;
-  /* max-width: 900px; */
   text-align: center;
   border-right-style: solid;
   border-right-width: 3px;
-  /* test */
-  /* border-left-style: dotted; */
-  /* border-left-width: 3px; */
-  /* border-left-color: coral; */
 }
 
 .imageLook {
@@ -44,10 +36,10 @@ body{
 .titre, .inList {
   letter-spacing: 1px;
   word-spacing: 2px;
-} 
+}
 
-.titre{
-    font-size: 40px;
+.titre {
+  font-size: 40px;
 }
 
 /* FLEX middle */
@@ -63,16 +55,17 @@ body{
   margin: 20px;
   margin-left: 45px;
 }
-.flexMiddle > div {
+
+.flexMiddle>div {
   margin: 30px;
   padding-left: 250px;
   color: white;
   font-weight: bold;
   font-size: 28px;
 }
-  
+
 /* FLEX bottom */
-  
+
 .flexBottom {
   display: flex;
   flex-grow: 1;
@@ -83,12 +76,13 @@ body{
 }
 
 /* .flexBottomLeft { */
+
 .flexBottomLeft, .flexBottomRight {
-  display: flex;  
-  flex-grow: 1; 
+  display: flex;
+  flex-grow: 1;
   flex-direction: column;
   border-radius: 10px;
-  padding: 15px;  
+  padding: 15px;
   margin-left: 30px;
   margin-right: 15px;
   margin-top: 15px;
@@ -101,24 +95,93 @@ body{
 
 /* Autre */
 
-.boldUnder{
-  font-weight: bold;    
+.boldUnder {
+  font-weight: bold;
   text-decoration: underline;
   text-shadow: 2px 2px 4px #757575;
 }
-  
-.indenter{
+
+.indenter {
   text-indent: 20px;
 }
-  
-.indenterList{
+
+.indenterList {
   list-style-type: none;
 }
 
-a:link{
+a:link {
   color: white;
 }
 
-a:visited{
+a:visited {
   color: #909090;
+}
+
+/* media print */
+
+@media print {
+  body {
+    background-color: white;
+    size: portrait;
+    margin: 1%;
+    max-width: 100%;
+    font-size: 12px;
+  }
+  .flexTop {
+    margin-left: 10%;
+    padding-right: 5%;
+  }
+  .flexTop>div {
+    margin: 2%;
+    padding: 1%;
+    min-width: 30%;
+  }
+  .flexMiddle {
+    border-top-right-radius: 200px 80px;
+    border-bottom-left-radius: 200px 80px;
+    border-bottom-right-radius: 20px 20px;
+    border-style: solid;
+    border-color: #757575;
+  }
+  .flexMiddle>div {
+    font-size: 18px;
+    color: black;
+  }
+  .imageLook {
+    /* width: 185px; */
+    width: 20%;
+    /* height: 250px; */
+    height: 20%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+  }
+  .flexBottom {
+    /* display: flex; */
+    /* flex-grow: 1; */
+    /* border-radius: 10px; */
+    /* background-color: #aaaaaa; */
+    /* max-width: 100%; */
+    margin: 10px;
+    border-style: solid;
+  }
+  
+  .flexBottomLeft, .flexBottomRight {
+    /* display: flex; */
+    /* flex-grow: 1; */
+    /* flex-direction: column; */
+    /* border-radius: 10px; */
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+  }
+  
+  .flexBottomRight {
+    border-style: solid;
+    border-color: #757575;
+    border-style: groove;
+  }
+  
 }
