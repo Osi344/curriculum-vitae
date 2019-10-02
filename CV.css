@@ -18,7 +18,7 @@ body {
 .flexTop>div {
   margin: 2%;
   padding: 1%;
-  min-width: 30%;
+  min-width: 26%;
   text-align: center;
   border-right-style: solid;
   border-right-width: 3px;
@@ -66,18 +66,21 @@ body {
   font-weight: bold;
   font-size: 36px;
   padding-left: 22%;
+  max-width: 100%;
 }
 
 /* FLEX bottom */
 
 .flexBottom {
   display: flex;
+  flex-direction: row;
   flex-grow: 1;
   flex-wrap: wrap;
   border-radius: 10px;
   background-color: #aaaaaa;
   max-width: 100%;
   margin: 4%;
+  padding: 5px;
 }
 
 .flexBottomLeft, .flexBottomRight {
@@ -85,12 +88,12 @@ body {
   flex-grow: 1;
   flex-direction: column;
   border-radius: 10px;
-  padding: 2%;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  min-width: 30%;
+  padding: 5px;
+  /* margin-left: 1%; */
+  /* margin-right: 2%; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-width: 26%;
 }
 
 .flexBottomRight {
@@ -131,7 +134,7 @@ a:visited {
     size: portrait;
     margin: 1%;
     max-width: 100%;
-    font-size: 12px;
+    font-size: 0.6em;
   }
   .flexMiddle {
     border-style: solid;
@@ -163,3 +166,38 @@ a:visited {
     border-style: groove;
   } 
 }
+/* portable computers ~15p */
+@media screen and (min-width: 1025px ) 
+                and (max-width: 1367px ) {
+  body {
+    font-size: 0.8em;
+  }
+  .titre {
+    font-size: 0.7em;
+  } 
+ 
+/* tablets */
+@media screen and (min-width: 415px )
+                and (max-width: 1024px ) {
+  body {
+    font-size: 0.4.em;
+  }
+  .titre {
+    font-size: 0.3em;
+  } 
+  .imageLook {
+    display: none;
+  } 
+}
+/* smart phones */
+@media screen and (max-width: 414px ) {
+  body {
+    font-size: 0.2em;
+  }
+  .titre {
+    font-size: 0.1em;
+  } 
+  .image {
+    display: none;
+  } 
+
