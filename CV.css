@@ -2,6 +2,7 @@ body {
   background-color: rgb(86, 138, 180);
   font-family: 'Titillium Web', Roboto Slab, serif;
   font-size: 24px;
+  max-width: 100%;
 }
 
 /* FLEX top */
@@ -9,8 +10,8 @@ body {
 .flexTop {
   display: flex;
   flex-grow: 1;
-  flex-wrap: wrap;
-  margin-left: 10%;
+  flex-wrap: nowrap;
+  margin-left: 12%;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -18,29 +19,13 @@ body {
 .flexTop>div {
   margin: 2%;
   padding: 1%;
-  min-width: 26%;
+  min-width: 30%;
   text-align: center;
   border-right-style: solid;
   border-right-width: 3px;
 }
 
-.imageLook {
-  float: left;
-  border-radius: 50%;
-  width: 18%;
-  height: 34%;
-  position: absolute;
-  top: 3%;
-  left: 1%;
-}
-
-.titre {
-  font-size: 40px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-}
-
-.inList{
+ul{
   letter-spacing: 0.5px;
 }
 
@@ -48,6 +33,8 @@ body {
 
 .flexMiddle {
   display: flex;
+  flex-wrap: nowrap;
+  /* flex-grow: 1; */
   background-color: rgb(35, 70, 136);
   border-top-left-radius: 2% 15%;
   border-top-right-radius: 20% 80%;
@@ -59,14 +46,33 @@ body {
   margin-left: 2%;
   justify-content: left;
   padding: 1%;
+  position: relative;
+  /* adaptation titre */
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 .flexMiddle>div {
-  color: white;
-  font-weight: bold;
-  font-size: 36px;
+  /* color: white; */
+  /* font-weight: bold; */
+  /* font-size: 36px; */
+  /* letter-spacing: 1px; */
+  /* word-spacing: 2px; */
   padding-left: 22%;
   max-width: 100%;
+}
+
+.imageLook {
+  float: left;
+  border-radius: 50%;
+  width: 230px;
+  height: 300px;
+  position: absolute;
+  top: -220px;
+  left: -30px;
 }
 
 /* FLEX bottom */
@@ -74,19 +80,18 @@ body {
 .flexBottom {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
-  flex-wrap: wrap;
   border-radius: 10px;
   background-color: #aaaaaa;
   max-width: 100%;
-  margin: 4%;
-  padding: 5px;
+  /* margin: 5px; */
+  /* padding: 5px; */
 }
 
 .flexBottomLeft, .flexBottomRight {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  flex-shrink: 1;
   border-radius: 10px;
   padding: 5px;
   /* margin-left: 1%; */
@@ -166,38 +171,100 @@ a:visited {
     border-style: groove;
   } 
 }
-/* portable computers ~15p */
-@media screen and (min-width: 1025px ) 
-                and (max-width: 1367px ) {
+
+/* bootstrap responsive breakpoints */
+
+
+@media screen and (max-width: 575px) {
+  body {  
+    font-size: 0.6em;
+  }
+  .image {
+    display: none;
+  }
+  .flexMiddle>div {
+    font-size: 0.4em;
+    /* letter-spacing: 1px; */
+    /* word-spacing: 2px; */
+  }
+  .imageLook {
+    width: 70px;
+    height: 150px;
+    top: -131px;
+    left: -17px;
+  }
+  ul{
+    padding-inline-start: 0.6em;
+  }
+  .flexBottom{
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 576px )
+                and (max-width: 767px) {
+  body {
+    font-size: 0.6em;
+  }
+  .flexMiddle>div {
+    font-size: 0.6em;
+    /* letter-spacing: 1px; */
+    /* word-spacing: 2px; */
+  }
+  .imageLook {
+    width: 85px;
+    height: 120px;
+    top: -100px;
+    left: -18px;
+  }
+  ul{
+    padding-inline-start: 0.6em;
+  }
+}
+
+@media screen and (min-width: 768px )
+                and (max-width: 991px) {
   body {
     font-size: 0.8em;
   }
-  .titre {
-    font-size: 0.7em;
-  } 
- 
-/* tablets */
-@media screen and (min-width: 415px )
-                and (max-width: 1024px ) {
-  body {
-    font-size: 0.4.em;
+  .flexMiddle>div {
+    font-size: 0.85em;
+    /* letter-spacing: 1px; */
+    /* word-spacing: 2px; */
   }
-  .titre {
-    font-size: 0.3em;
-  } 
   .imageLook {
-    display: none;
-  } 
-}
-/* smart phones */
-@media screen and (max-width: 414px ) {
-  body {
-    font-size: 0.2em;
+    width: 115px;
+    height: 160px;
+    top: -130px;
+    left: -22px;
   }
-  .titre {
-    font-size: 0.1em;
-  } 
-  .image {
-    display: none;
-  } 
+  ul{
+    padding-inline-start: 0.8em;
+  }
+}
 
+@media screen and (min-width: 992px )
+                and (max-width: 1199px) {
+  body {
+    font-size: 0.9em;
+  }
+  /* .flexMiddle { */
+    /* font-size: 90%; */
+    /* letter-spacing: 1px; */
+    /* word-spacing: 2px; */
+  }
+  .flexMiddle>div {
+    font-size: 0.9em;
+    /* letter-spacing: 1px; */
+    /* word-spacing: 2px; */
+  }
+  .imageLook {
+    width: 140px;
+    height: 190px;
+    top: -150px;
+    left: -24px;
+  }
+  ul{
+    padding-inline-start: 0.9em;
+  }
+}
