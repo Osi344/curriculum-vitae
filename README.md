@@ -1,2 +1,2 @@
 # HTML_CSS
-Séance
+Reproduire un CV - mobile first
