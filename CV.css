@@ -1,31 +1,60 @@
 body {
-  background-color: #568ab4;
   font-family: 'Titillium Web', Roboto Slab, serif;
-  font-size: 24px;
+  font-size: 1rem;
   max-width: 100%;
-  --bgColor: #757575;
-  --fullColor: #ffffff;
+
+  --darkColor: #333333;
+  --lightColor: #fff0e0;
+  --greenColor: #669966;
+  --fontColor: #ffc278;
 }
 
 /* flexTop container */
 
-.flexTop {
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: nowrap;
-  margin-left: 12%;
-  padding-left: 5%;
-  padding-right: 5%;
+.right {
+  position: absolute;
+  top: 0;
+  background-color: var(--lightColor);
+  color: var(--darkColor);
+  font-size: 1rem;
 }
 
-.flexTop>div {
-  margin: 2%;
-  padding: 1%;
-  min-width: 30%;
+.title-0 {
+  background-color: var(--greenColor);
+  color: var(--darkColor);
+  font-size: 1.4rem;
+  position: relative;
+  top: 0;
+  width: 95%;
+  height: 8%;
   text-align: center;
-  border-right-style: solid;
-  border-right-width: 3px;
+  padding-top: 20px;
+  padding-bottom: 16px;
 }
+
+.title-1 {
+  color: var(--greenColor);
+  font-weight: bold;
+}
+
+.title-2 {
+  color: var(--darkColor);
+}
+
+.right-content {
+  position: relative;
+}
+
+.left {
+  position: absolute;
+  top: 188%;
+  background-color: var(--darkColor);
+  color: var(--fontColor);
+  font-size: 1rem;
+}
+
+
+/* ----------------------------- */
 
 ul {
   letter-spacing: 0.5px;
@@ -35,80 +64,9 @@ ul {
 /* flexMiddle container*/
 
 .flexMiddle {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: #234688;
-  /* border settings */
-  border-top-left-radius: 2% 15%;
-  border-top-right-radius: 20% 80%;
-  border-bottom-left-radius: 20% 80%;
-  border-bottom-right-radius: 2% 15%;
-  border-style: solid;
-  border-color: var(--fullColor);
-  margin: 1%;
-  margin-left: 2%;
-  justify-content: left;
-  padding: 1%;
-  position: relative;
-  /* title specifications */
-  font-size: 36px;
-  color: var(--fullColor);
-  font-weight: bold;
+  
   letter-spacing: 1px;
   word-spacing: 2px;
-}
-
-.flexMiddle>div {
-  padding-left: 22%;
-  max-width: 100%;
-}
-
-/* image settings */
-
-.imageLook {
-  float: left;
-  border-radius: 50%;
-  width: 230px;
-  height: 300px;
-  position: absolute;
-  top: -220px;
-  left: -30px;
-}
-
-/* flexBottom container*/
-
-.flexBottom {
-  display: flex;
-  flex-direction: row;
-  border-radius: 10px;
-  background-color: #aaaaaa;
-  max-width: 100%;
-}
-
-/* flexBottom main contents */
-
-.flexBottomLeft, .flexBottomRight {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  flex-shrink: 1;
-  border-radius: 10px;
-  padding: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  min-width: 26%;
-}
-
-/* .flexBottomLeft color specification */
-
-.flexBottomLeft {
-  background-color: var(--bgColor);
-}
-
-/* .flexBottomRight color specification */
-
-.flexBottomRight {
-  background-color: #dddddd;
 }
 
 /*  headings specifications*/
