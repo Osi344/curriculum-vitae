@@ -19,6 +19,31 @@ body {
   font-size: 1rem;
 }
 
+.contact {
+  /* display: none; */
+  position: absolute;
+  /* bottom: 0; */
+  top: 80%;
+  width: 100%;
+  padding-top: 10px;
+  background-color: var(--darkColor);
+  color: var(--fontColor);
+  text-align: center;
+  font-size: 0.8rem;
+  animation-name: contact-popup;
+  animation-delay: 1s;
+  animation-duration: 4s;
+}
+
+/* .contact > .title-1 {
+  font-size: 1.4rem;
+} */
+
+@keyframes contact-popup {
+  0%  { top: 100% }
+  100% { top: 80% }
+}
+
 .title-0 {
   background-color: var(--greenColor);
   color: var(--darkColor);
@@ -35,6 +60,7 @@ body {
 .title-1 {
   color: var(--greenColor);
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .title-2 {
@@ -43,11 +69,20 @@ body {
 
 .right-content {
   position: relative;
+  font-size: 0.8rem;
+}
+
+li {
+  font-weight: bold;
+}
+
+li > p {
+  font-weight: normal;
 }
 
 .left {
   position: absolute;
-  top: 188%;
+  top: 144%;
   background-color: var(--darkColor);
   color: var(--fontColor);
   font-size: 1rem;
