@@ -14,9 +14,12 @@ body {
 .right {
   position: absolute;
   top: 0;
+  width: 95%;
   background-color: var(--lightColor);
   color: var(--darkColor);
   font-size: 1rem;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .contact {
@@ -68,20 +71,20 @@ body {
 }
 
 .right-content {
-  position: relative;
+  /* position: relative; */
   font-size: 0.8rem;
 }
 
 .left {
   position: absolute;
   top: 144%;
+  width: 95%;
   background-color: var(--darkColor);
   color: var(--fontColor);
-/* 
-  background-color: var(--lightColor);
-  color: var(--darkColor); */
-
-  font-size: 1rem;font-size: 0.8rem;
+  font-size: 0.8rem;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 20px;
 }
 
 
@@ -106,25 +109,35 @@ body {
   background-color: var(--greenColor);
 }
 
-li {
-  font-weight: bold;
+p {
+  margin: 7px 3px;
 }
 
-li > p {
+ul {
+  padding-inline-start: 2em;
+  letter-spacing: 0.5px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+li {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+li > p, .li-under{
   font-weight: normal;
 }
 
-/* ----------------------------- */
-
-ul {
-  letter-spacing: 0.5px;
-  padding-inline-start: 0.9em;
+.li-under {
+  margin-bottom: 0.3rem;
 }
 
 /* flexMiddle container*/
 
 .flexMiddle {
-  
   letter-spacing: 1px;
   word-spacing: 2px;
 }
@@ -200,102 +213,78 @@ a:visited {
 
 /* bootstrap responsive breakpoints */
 
-/* XS size screen */
 
-@media screen and (max-width: 575px) {
-  /* XS - main font size update */
+/* @media screen and (max-width: 575px) {
   body {
     font-size: 0.6em;
   }
-  /* XS - middle font size update */
   .flexMiddle {
     font-size: 1em;
   }
-  /* XS - image size update */
   .imageLook {
     width: 70px;
     height: 150px;
     top: -131px;
     left: -17px;
   }
-  /* XS - lists indentation update */
   ul {
     padding-inline-start: 0.7em;
   }
-  /* XS - main flex direction toggle */
   .flexBottom {
     flex-direction: column;
   }
 }
 
-/* S size screen */
-
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  /* S - main font size update */
   body {
     font-size: 0.6em;
   }
-  /* S - middle font size update */
   .flexMiddle {
     font-size: 1.2em;
   }
-  /* S - image size update */
   .imageLook {
     width: 85px;
     height: 120px;
     top: -100px;
     left: -18px;
   }
-  /* S - lists indentation update */
   ul {
     padding-inline-start: 0.7em;
   }
 }
 
-/* M size screen */
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  /* M - main font size update */
   body {
     font-size: 0.8em;
   }
-  /* M - middle font size update */
   .flexMiddle {
     font-size: 1.4em;
   }
-  /* M - image size update */
   .imageLook {
     width: 115px;
     height: 160px;
     top: -130px;
     left: -22px;
   }
-  /* M - lists indentation update */
   ul {
     padding-inline-start: 0.8em;
   }
 }
 
-/* L size screen */
-
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* L - main font size update */
   body {
     font-size: 1em;
   }
-  /* L - middle font size update */
   .flexMiddle {
     font-size: 1.7em;
   }
-  /* L - image size update */
   .imageLook {
     width: 140px;
     height: 190px;
     top: -150px;
     left: -24px;
   }
-  /* L - lists indentation update */
   ul {
     padding-inline-start: 0.8em;
   }
-}
+} */
