@@ -180,14 +180,58 @@ a:visited {
 
 @media print {
   body {
-    background-color: #ffffff;
     size: portrait;
+    background-color: #fff;
+    color: #000;
     margin: 1%;
     max-width: 100%;
-    font-size: 0.6em;
+    /* font-size: 0.6em; */
   }
 
+  .container {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 5% auto 20%;
+    grid-template-areas:
+      'title title'
+      'left right'
+      'contact right';
+  }
 
+  .item-right,
+  .item-left,
+  .item-contact {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    color: #000;
+  }
+
+  .item-right,
+  .item-left {
+    margin-top: 40px;
+  }
+
+  .right-content {
+    font-size: 1rem;
+  }
+
+  .formation {
+    margin-top: 80px;
+  }
+
+  .item-title-0 {
+    font-size: 2rem;
+  }
+
+  .title-1 {
+    font-size: 1.4rem;
+  }
+  
+  a:link, a:visited {
+    color: #000;
+  }
 }
 
 /* bootstrap responsive breakpoints */
@@ -280,20 +324,21 @@ a:visited {
     grid-template-rows: auto auto 180px;
     grid-template-areas:
       'title title'
-      'left right' 
+      'left right'
       'contact right';
   }
 
   .item-right,
   .item-left,
   .item-contact {
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
     margin-left: 0px;
     margin-right: 0px;
     width: 100%;
   }
+
   .right-content {
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
   }
 
   .item-title-0 {
