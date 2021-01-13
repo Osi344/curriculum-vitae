@@ -6,9 +6,10 @@ body {
   margin-top: 0;
 
   --darkColor: #333333;
+  --backColor: #505050;
   --lightColor: #fff0e0;
   --greenColor: #669966;
-  --fontColor: #ffc278;
+  --fontColor: #e6ccb3;
 }
 
 .item-title-0 {
@@ -17,11 +18,10 @@ body {
   top: 0;
   width: 100%;
   height: 50px;
-  padding-top: 20px;
-  padding-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 7px;
   margin-bottom: 5px;
   z-index: 1;
-  /* background-color: var(--greenColor); */
   background-image: linear-gradient(var(--greenColor), var(--lightColor));
   color: var(--darkColor);
   font-size: 1.6rem;
@@ -42,7 +42,6 @@ body {
 .item-right,
 .item-left,
 .item-contact {
-  /* position: relative; */
   width: 95%;
   margin-left: auto;
   margin-right: auto;
@@ -56,25 +55,24 @@ body {
   grid-area: right;
   background-color: var(--lightColor);
   color: var(--darkColor);
-  /* font-size: 1rem; */
+  border-radius: 0 0 10px 10px;
 }
 
 .item-left {
   grid-area: left;
-  background-color: var(--darkColor);
+  margin-top: 8px;
+  background-color: var(--backColor);
   color: var(--fontColor);
+  border-radius: 0 0 10px 10px;
 }
 
 .item-contact {
   grid-area: contact;
-  margin-top: 10px;
-  background-color: var(--darkColor);
+  margin-top: 8px;
+  background-color: var(--backColor);
   color: var(--fontColor);
   text-align: center;
   border-radius: 10px;
-  /* animation-name: contact-popup;
-  animation-delay: 1s;
-  animation-duration: 4s; */
 }
 
 .container {
@@ -101,38 +99,54 @@ body {
   margin-right: 10px;
 }
 
-@keyframes contact-popup {
-  0% {
-    top: 100%
-  }
-
-  100% {
-    top: 80%
-  }
+.media-print {
+  display: none;
 }
-
 
 .right-content {
   width: 100%;
   font-size: 0.8rem;
 }
 
-
-.skill-bar {
-  display: inline-flex;
-  /* justify-content: flex-end; */
+.langue {
+  grid-area: name;
+  justify-self: start;
 }
 
+.skill-bar {
+  grid-area: level;
+  justify-self: end;
+  align-self: center;
+  width: 160px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1ch;
+}
+
+.li-title li {
+  /* width: 60%; */
+  text-align: end;
+}
+
+.li-container {
+  display: grid;
+  grid-template-columns: 80px 160px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "name level"
+}
+
+
 .skill-level {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border: 1px solid;
   border-radius: 50%;
-  margin-left: 2px;
 }
 
 .skill-0 {
-  background-color: var(--darkColor);
+  background-color: var(--backColor);
 }
 
 .skill-1 {
@@ -206,6 +220,8 @@ a:visited {
     margin-right: 0px;
     width: 100%;
     color: #000;
+
+
   }
 
   .item-right,
@@ -215,6 +231,15 @@ a:visited {
 
   .right-content {
     font-size: 1rem;
+  }
+
+  .item-contact {
+    border: 1px solid #000;
+    margin-left: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .formation {
@@ -228,9 +253,19 @@ a:visited {
   .title-1 {
     font-size: 1.4rem;
   }
-  
-  a:link, a:visited {
+
+  a:link,
+  a:visited {
     color: #000;
+  }
+
+  .item-contact .media-print {
+    font-size: 0.8rem;
+  }
+
+
+  .media-print {
+    display: inline;
   }
 }
 
@@ -260,7 +295,16 @@ a:visited {
   .interets,
   .divers {
     padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 10px;
+  }
+
+  .li-container {
+    grid-template-columns: 100px 200px;
+  }
+
+  .skill-level {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -293,8 +337,17 @@ a:visited {
   .langues,
   .interets,
   .divers {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 8%;
+    padding-right: 10px;
+  }
+
+  .li-container {
+    grid-template-columns: 100px 240px;
+  }
+
+  .skill-level {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -307,6 +360,10 @@ a:visited {
     font-size: 1.4rem;
   }
 
+  .right-content {
+    width: 95%;
+  }
+
   .item-title-0 {
     font-size: 2.2rem;
   }
@@ -315,6 +372,14 @@ a:visited {
     font-size: 2rem;
   }
 
+  .li-container {
+    grid-template-columns: 150px 250px;
+  }
+
+  .skill-level {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -332,9 +397,13 @@ a:visited {
   .item-left,
   .item-contact {
     font-size: 1.4rem;
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 98%;
+  }
+
+  .item-left {
+    margin-top: 0;
   }
 
   .right-content {
@@ -348,4 +417,5 @@ a:visited {
   .title-1 {
     font-size: 2rem;
   }
+
 }
