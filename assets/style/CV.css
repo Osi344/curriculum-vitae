@@ -149,8 +149,49 @@ body {
   background-color: var(--backColor);
 }
 
-.skill-1 {
+.skill-11 {
   background-color: var(--greenColor);
+  animation-name: popup1;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.skill-12 {
+  background-color: var(--greenColor);
+  animation-name: popup2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.skill-13 {
+  background-color: var(--greenColor);
+  animation-name: popup3;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes popup1 {
+  0%   { background-color: var(--backColor) }
+  20%  { background-color: var(--greenColor) }
+  80%  { background-color: var(--greenColor) }
+  100% { background-color: var(--backColor) }
+}
+
+@keyframes popup2 {
+  0%   { background-color: var(--backColor) }
+  20%  { background-color: var(--backColor) }
+  40%  { background-color: var(--greenColor) }
+  80%  { background-color: var(--greenColor) }
+  100% { background-color: var(--backColor) }
+}
+
+@keyframes popup3 {
+  0%   { background-color: var(--backColor) }
+  40%  { background-color: var(--backColor) }
+  60%  { background-color: var(--greenColor) }
+  80%  { background-color: var(--greenColor) }
+  100% { background-color: var(--backColor) }
 }
 
 p {
